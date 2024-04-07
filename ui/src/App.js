@@ -1,21 +1,16 @@
-import React, { Component } from 'react';
-import './App.css';
-import { BrowserRouter as Router} from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
+// auth provider
 
-class App extends Component {
-  render() {
-    return (
+import routes, { renderRoutes } from './routes';
 
-      <Router basename={process.env.PUBLIC_URL}>
-        <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Simple React App</h1>
-        </header>
-      </div>
-    </Router>
-    );
-  }
-}
+const App = () => {
+  return (
+    <React.Fragment>
+      <BrowserRouter basename={process.env.REACT_APP_BASE_NAME}>{renderRoutes(routes)}</BrowserRouter>
+    </React.Fragment>
+  );
+};
 
 export default App;
