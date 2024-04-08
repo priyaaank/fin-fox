@@ -27,8 +27,8 @@ jobs:
             exit 0
       - name: Setup Node
         uses: actions/setup-node@v4
-        working-directory: ./ui
         with:
+          path: ./ui
           node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Install dependencies
