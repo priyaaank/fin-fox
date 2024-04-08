@@ -34,8 +34,10 @@ jobs:
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ./ui/package-lock.json
       - name: Install dependencies
+        working-directory: ./ui
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build project
+        working-directory: ./ui
         run: ${{ steps.detect-package-manager.outputs.runner }} npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
