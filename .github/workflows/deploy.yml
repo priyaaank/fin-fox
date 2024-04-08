@@ -14,12 +14,14 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./ui
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
       - name: Detect package manager
         id: detect-package-manager
-        working-directory: ./ui
         run: |
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
@@ -28,14 +30,11 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          path: ./ui
           node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Install dependencies
-        working-directory: ./ui
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build project
-        working-directory: ./ui
         run: ${{ steps.detect-package-manager.outputs.runner }} npm run build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
