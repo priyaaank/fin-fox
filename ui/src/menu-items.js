@@ -29,7 +29,7 @@ const menuItems = {
               id: 'goals-deductions',
               title: 'Deductions',
               type: 'item',
-              url: '/basic/typography'
+              url: '/goals/deductions'
             }
           ]
         },
