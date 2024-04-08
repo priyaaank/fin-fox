@@ -47,9 +47,6 @@
     "web-vitals": "^3.3.2",
     "yup": "^1.2.0"
   },
-  "overrides": {
-    "autoprefixer": "10.4.5"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
