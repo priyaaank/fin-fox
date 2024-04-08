@@ -62,6 +62,11 @@ const routes = [
       },
       {
         exact: 'true',
+        path: '/goals/master',
+        element: lazy(() => import('./views/goals/MasterGoals'))
+      },
+      {
+        exact: 'true',
         path: '/basic/button',
         element: lazy(() => import('./views/ui-elements/basic/BasicButton'))
       },

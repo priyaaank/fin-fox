@@ -23,7 +23,7 @@ const menuItems = {
               id: 'goals-master-list',
               title: 'Master list',
               type: 'item',
-              url: '/basic/tabs-pills'
+              url: '/goals/master'
             },
             {
               id: 'goals-deductions',
