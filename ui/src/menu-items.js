@@ -16,221 +16,72 @@ const menuItems = {
         {
           id: 'goals',
           title: 'Goals',
-          type: 'item',
-          icon: 'feather icon-home',
-          url: '/app/dashboard/goals'
-        }
-      ]
-    },
-    {
-      id: 'ui-element',
-      title: 'UI ELEMENT',
-      type: 'group',
-      icon: 'icon-ui',
-      children: [
-        {
-          id: 'component',
-          title: 'Component',
           type: 'collapse',
-          icon: 'feather icon-box',
+          icon: 'feather icon-target',
           children: [
             {
-              id: 'button',
-              title: 'Button',
-              type: 'item',
-              url: '/basic/button'
-            },
-            {
-              id: 'badges',
-              title: 'Badges',
-              type: 'item',
-              url: '/basic/badges'
-            },
-            {
-              id: 'breadcrumb',
-              title: 'Breadcrumb',
-              type: 'item',
-              url: '/basic/breadcrumb'
-            },
-            {
-              id: 'pagination',
-              title: 'Pagination',
-              type: 'item',
-              url: '/basic/pagination'
-            },
-            {
-              id: 'collapse',
-              title: 'Collapse',
-              type: 'item',
-              url: '/basic/collapse'
-            },
-            {
-              id: 'tabs-pills',
-              title: 'Tabs & Pills',
+              id: 'goals-master-list',
+              title: 'Master list',
               type: 'item',
               url: '/basic/tabs-pills'
             },
             {
-              id: 'typography',
-              title: 'Typography',
+              id: 'goals-deductions',
+              title: 'Deductions',
               type: 'item',
               url: '/basic/typography'
             }
           ]
-        }
-      ]
-    },
-    {
-      id: 'ui-forms',
-      title: 'FORMS & TABLES',
-      type: 'group',
-      icon: 'icon-group',
-      children: [
-        {
-          id: 'forms',
-          title: 'Form Elements',
-          type: 'item',
-          icon: 'feather icon-file-text',
-          url: '/forms/form-basic'
         },
         {
-          id: 'table',
-          title: 'Table',
-          type: 'item',
-          icon: 'feather icon-server',
-          url: '/tables/bootstrap'
-        }
-      ]
-    },
-    {
-      id: 'chart-maps',
-      title: 'Chart & Maps',
-      type: 'group',
-      icon: 'icon-charts',
-      children: [
+          id: 'investments',
+          title: 'Investments',
+          type: 'collapse',
+          icon: 'feather icon-umbrella',
+          children: [
+            {
+              id: 'investments-current',
+              title: 'Current',
+              type: 'item',
+              url: '/basic/button'
+            },
+            {
+              id: 'investments-recurring',
+              title: 'Recurring',
+              type: 'item',
+              url: '/basic/badges'
+            }
+          ]
+        },
         {
-          id: 'charts',
-          title: 'Charts',
+          id: 'assets',
+          title: 'Assets',
+          type: 'item',
+          icon: 'feather icon-triangle',
+          url: '/basic/collapse'
+        },
+        {
+          id: 'reports',
+          title: 'Reports',
           type: 'item',
           icon: 'feather icon-pie-chart',
-          url: '/charts/nvd3'
+          url: '/basic/pagination'
         },
         {
-          id: 'maps',
-          title: 'Maps',
+          id: 'settings',
+          title: 'Settings',
           type: 'item',
-          icon: 'feather icon-map',
-          url: '/maps/google-map'
+          icon: 'feather icon-settings',
+          url: '/basic/breadcrumb'
+        },
+        {
+          id: 'logout',
+          title: 'Logout',
+          type: 'item',
+          icon: 'feather icon-power',
+          url: '/basic/breadcrumb'
         }
-      ]
-    },
-    {
-      id: 'pages',
-      title: 'Pages',
-      type: 'group',
-      icon: 'icon-pages',
-      children: [
-        {
-          id: 'auth',
-          title: 'Authentication',
-          type: 'collapse',
-          icon: 'feather icon-lock',
-          badge: {
-            title: 'New',
-            type: 'label-danger'
-          },
-          children: [
-            {
-              id: 'signup-1',
-              title: 'Sign up',
-              type: 'item',
-              url: '/auth/signup-1',
-              target: true,
-              breadcrumbs: false
-            },
-            {
-              id: 'signin-1',
-              title: 'Sign in',
-              type: 'item',
-              url: '/auth/signin-1',
-              target: true,
-              breadcrumbs: false
-            }
-          ]
-        },
-        {
-          id: 'sample-page',
-          title: 'Sample Page',
-          type: 'item',
-          url: '/sample-page',
-          classes: 'nav-item',
-          icon: 'feather icon-sidebar'
-        },
-        {
-          id: 'documentation',
-          title: 'Documentation',
-          type: 'item',
-          icon: 'feather icon-book',
-          classes: 'nav-item',
-          url: 'https://codedthemes.gitbook.io/datta/',
-          target: true,
-          external: true
-        },
-        {
-          id: 'menu-level',
-          title: 'Menu Levels',
-          type: 'collapse',
-          icon: 'feather icon-menu',
-          children: [
-            {
-              id: 'menu-level-1.1',
-              title: 'Menu Level 1.1',
-              type: 'item',
-              url: '#!'
-            },
-            {
-              id: 'menu-level-1.2',
-              title: 'Menu Level 2.2',
-              type: 'collapse',
-              children: [
-                {
-                  id: 'menu-level-2.1',
-                  title: 'Menu Level 2.1',
-                  type: 'item',
-                  url: '#'
-                },
-                {
-                  id: 'menu-level-2.2',
-                  title: 'Menu Level 2.2',
-                  type: 'collapse',
-                  children: [
-                    {
-                      id: 'menu-level-3.1',
-                      title: 'Menu Level 3.1',
-                      type: 'item',
-                      url: '#'
-                    },
-                    {
-                      id: 'menu-level-3.2',
-                      title: 'Menu Level 3.2',
-                      type: 'item',
-                      url: '#'
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          id: 'disabled-menu',
-          title: 'Disabled Menu',
-          type: 'item',
-          url: '#',
-          classes: 'nav-item disabled',
-          icon: 'feather icon-power'
-        }
-      ]
+      ]    
     }
   ]
 };
