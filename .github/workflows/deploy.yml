@@ -28,7 +28,7 @@ jobs:
           cache-dependency-path: ./ui/package-lock.json
       - name: Install dependencies
         working-directory: ./ui/
-        run: npm ci
+        run: ls -la && npm ci
       - name: Build project
         working-directory: ./ui
         run: npx --no-install npm run build
