@@ -2,6 +2,7 @@ import React from 'react';
 import { Row, Col, Card, Collapse } from 'react-bootstrap';
 
 import PieDonutChart from '../charts/nvd3-chart/chart/PieDonutChart';
+import BarDiscreteChart from '../charts/nvd3-chart/chart/BarDiscreteChart';
 import BasicTable from '../../components/Table/BasicTable';
 
 const totalAssets = { title: 'Total assets', amount: '₹ 2,03,03,400', icon: 'icon-database text-c-green', value: 100, class: 'progress-c-theme' };  
@@ -23,6 +24,54 @@ const data = [
     [3, "SGB-June2023", "Gold", "5%", "₹ 5000000"],
     [4, "PF", "PF", "8%", "₹ 319,522,458"]
   ]
+
+  const assetGrowthData = [
+    {
+      key: 'Cumulative Return',
+      values: [
+        {
+          label: '2017',
+          value: -10,
+          color: '#3ebfea'
+        },
+        {
+          label: '2018',
+          value: 10,
+          color: '#04a9f5'
+        },
+        {
+          label: '2019',
+          value: 12,
+          color: '#ff8a65'
+        },
+        {
+          label: '2020',
+          value: 60,
+          color: '#1de9b6'
+        },
+        {
+          label: '2021',
+          value: 55,
+          color: '#4C5667'
+        },
+        {
+          label: '2022',
+          value: 40,
+          color: '#69CEC6'
+        },
+        {
+          label: '2023',
+          value: 30,
+          color: '#a389d4'
+        },
+        {
+          label: '2024',
+          value: 12,
+          color: '#FE8A7D'
+        }
+      ]
+    }
+  ];
 
 
 const Nvd3Chart = () => {
@@ -92,6 +141,16 @@ const Nvd3Chart = () => {
             </Card>
         </Col>
       </Row>
+      <Col md={12}>
+          <Card>
+            <Card.Header>
+              <Card.Title as="h5">Asset growth overtime in %</Card.Title>
+            </Card.Header>
+            <Card.Body>
+              <BarDiscreteChart data={assetGrowthData} />
+            </Card.Body>
+          </Card>
+        </Col>
       <Row>
         <Col>
             <BasicTable title="Asset list" subtitle="List of all assets and their current value" headers={headers} rows={data} />
