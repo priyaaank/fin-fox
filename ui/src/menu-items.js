@@ -43,13 +43,13 @@ const menuItems = {
               id: 'investments-current',
               title: 'Current',
               type: 'item',
-              url: '/basic/button'
+              url: '/investments/current'
             },
             {
               id: 'investments-recurring',
               title: 'Recurring',
               type: 'item',
-              url: '/basic/badges'
+              url: '/investments/recurring'
             }
           ]
         },
