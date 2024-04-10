@@ -58,7 +58,7 @@ const menuItems = {
           title: 'Assets',
           type: 'item',
           icon: 'feather icon-triangle',
-          url: '/basic/collapse'
+          url: '/assets/all'
         },
         {
           id: 'reports',
