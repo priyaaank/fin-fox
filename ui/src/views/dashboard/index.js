@@ -49,7 +49,7 @@ const DashDefault = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col>
+        <Col  md={6} xl={4}>
           <Card className="card-social">
             <Card.Body className="border-bottom">
               <div className="row align-items-center justify-content-center">
@@ -83,7 +83,7 @@ const DashDefault = () => {
           </Card>
         </Col>
 
-        <Col>
+        <Col  md={6} xl={4}>
           <Card className="card-social">
             <Card.Body className="border-bottom">
               <div className="row align-items-center justify-content-center">
@@ -117,126 +117,63 @@ const DashDefault = () => {
           </Card>
         </Col>
 
-        <Col md={6} xl={8}>
-          <Card className="Recent-Users">
+        <Col md={6} xl={6}>
+          <Card className="user-list">
             <Card.Header>
-              <Card.Title as="h5">Recent Users</Card.Title>
+              <Card.Title as="h5">Goals summary</Card.Title>
             </Card.Header>
             <Card.Body className="px-0 py-2">
               <Table responsive hover className="recent-users">
+              <thead>
+                  <tr>
+                    <th></th>
+                    <th>Goal</th>
+                    <th>Year</th>
+                    <th>Status</th>
+                    <th>Progress</th>
+                  </tr>
+                </thead>
                 <tbody>
                   <tr className="unread">
                     <td>
-                      <img className="rounded-circle" style={{ width: '40px' }} src={avatar1} alt="activity-user" />
+                      <i className="fa fa-stop-circle text-success f-36" />
                     </td>
                     <td>
-                      <h6 className="mb-1">Isabella Christensen</h6>
-                      <p className="m-0">Lorem Ipsum is simply dummy text of…</p>
+                      <h6 className="mb-1">Sara education</h6>
+                      <p className="m-0">Fund higher education for Sara</p>
+                    </td>
+                    <td>
+                      <h6 className="text-muted float-right">
+                        2044
+                      </h6>
+                    </td>
+                    <td>
+                    <i className="fa fa-circle text-c-green f-10 m-r-15 float-left" />
+                    </td>
+                    <td>
+                      <label className="label theme-bg2 text-white f-14 f-w-400 float-middle">90%</label>
+                    </td>
+                  </tr>
+                  <tr className="read">
+                    <td>
+                      <i className="fa fa-stop-circle text-success f-36" />
+                    </td>
+                    <td>
+                      <h6 className="mb-1">Arsh education</h6>
+                      <p className="m-0">Fund higher education for Arsh</p>
                     </td>
                     <td>
                       <h6 className="text-muted">
-                        <i className="fa fa-circle text-c-green f-10 m-r-15" />
-                        11 MAY 12:56
+                        2044
                       </h6>
                     </td>
                     <td>
-                      <Link to="#" className="label theme-bg2 text-white f-12">
-                        Reject
-                      </Link>
-                      <Link to="#" className="label theme-bg text-white f-12">
-                        Approve
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr className="unread">
-                    <td>
-                      <img className="rounded-circle" style={{ width: '40px' }} src={avatar2} alt="activity-user" />
+                      <i className="fa fa-circle text-c-red f-10 m-r-15" />
                     </td>
                     <td>
-                      <h6 className="mb-1">Mathilde Andersen</h6>
-                      <p className="m-0">Lorem Ipsum is simply dummy text of…</p>
-                    </td>
-                    <td>
-                      <h6 className="text-muted">
-                        <i className="fa fa-circle text-c-red f-10 m-r-15" />
-                        11 MAY 10:35
-                      </h6>
-                    </td>
-                    <td>
-                      <Link to="#" className="label theme-bg2 text-white f-12">
-                        Reject
-                      </Link>
-                      <Link to="#" className="label theme-bg text-white f-12">
-                        Approve
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr className="unread">
-                    <td>
-                      <img className="rounded-circle" style={{ width: '40px' }} src={avatar3} alt="activity-user" />
-                    </td>
-                    <td>
-                      <h6 className="mb-1">Karla Sorensen</h6>
-                      <p className="m-0">Lorem Ipsum is simply dummy text of…</p>
-                    </td>
-                    <td>
-                      <h6 className="text-muted">
-                        <i className="fa fa-circle text-c-green f-10 m-r-15" />9 MAY 17:38
-                      </h6>
-                    </td>
-                    <td>
-                      <Link to="#" className="label theme-bg2 text-white f-12">
-                        Reject
-                      </Link>
-                      <Link to="#" className="label theme-bg text-white f-12">
-                        Approve
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr className="unread">
-                    <td>
-                      <img className="rounded-circle" style={{ width: '40px' }} src={avatar1} alt="activity-user" />
-                    </td>
-                    <td>
-                      <h6 className="mb-1">Ida Jorgensen</h6>
-                      <p className="m-0">Lorem Ipsum is simply dummy text of…</p>
-                    </td>
-                    <td>
-                      <h6 className="text-muted f-w-300">
-                        <i className="fa fa-circle text-c-red f-10 m-r-15" />
-                        19 MAY 12:56
-                      </h6>
-                    </td>
-                    <td>
-                      <Link to="#" className="label theme-bg2 text-white f-12">
-                        Reject
-                      </Link>
-                      <Link to="#" className="label theme-bg text-white f-12">
-                        Approve
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr className="unread">
-                    <td>
-                      <img className="rounded-circle" style={{ width: '40px' }} src={avatar2} alt="activity-user" />
-                    </td>
-                    <td>
-                      <h6 className="mb-1">Albert Andersen</h6>
-                      <p className="m-0">Lorem Ipsum is simply dummy text of…</p>
-                    </td>
-                    <td>
-                      <h6 className="text-muted">
-                        <i className="fa fa-circle text-c-green f-10 m-r-15" />
-                        21 July 12:56
-                      </h6>
-                    </td>
-                    <td>
-                      <Link to="#" className="label theme-bg2 text-white f-12">
-                        Reject
-                      </Link>
-                      <Link to="#" className="label theme-bg text-white f-12">
-                        Approve
-                      </Link>
+                      <div className="col-auto">
+                        <label className="label theme-bg2 text-white f-14 f-w-400 float-middle">20%</label>
+                      </div>
                     </td>
                   </tr>
                 </tbody>
@@ -244,406 +181,55 @@ const DashDefault = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col md={6} xl={4}>
-          <Card className="card-event">
-            <Card.Body>
-              <div className="row align-items-center justify-content-center">
-                <div className="col">
-                  <h5 className="m-0">Upcoming Event</h5>
-                </div>
-                <div className="col-auto">
-                  <label className="label theme-bg2 text-white f-14 f-w-400 float-end">34%</label>
-                </div>
-              </div>
-              <h2 className="mt-2 f-w-300">
-                45<sub className="text-muted f-14">Competitors</sub>
-              </h2>
-              <h6 className="text-muted mt-3 mb-0">You can participate in event </h6>
-              <i className="fa fa-angellist text-c-purple f-50" />
-            </Card.Body>
-          </Card>
-          <Card>
-            <Card.Body className="border-bottom">
-              <div className="row d-flex align-items-center">
-                <div className="col-auto">
-                  <i className="feather icon-zap f-30 text-c-green" />
-                </div>
-                <div className="col">
-                  <h3 className="f-w-300">235</h3>
-                  <span className="d-block text-uppercase">total ideas</span>
-                </div>
-              </div>
-            </Card.Body>
-            <Card.Body>
-              <div className="row d-flex align-items-center">
-                <div className="col-auto">
-                  <i className="feather icon-map-pin f-30 text-c-blue" />
-                </div>
-                <div className="col">
-                  <h3 className="f-w-300">26</h3>
-                  <span className="d-block text-uppercase">total locations</span>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={6} xl={4}>
-          <Card className="card-social">
-            <Card.Body className="border-bottom">
-              <div className="row align-items-center justify-content-center">
-                <div className="col-auto">
-                  <i className="fab fa-facebook-f text-primary f-36" />
-                </div>
-                <div className="col text-end">
-                  <h3>12,281</h3>
-                  <h5 className="text-c-green mb-0">
-                    +7.2% <span className="text-muted">Total Likes</span>
-                  </h5>
-                </div>
-              </div>
-            </Card.Body>
-            <Card.Body>
-              <div className="row align-items-center justify-content-center card-active">
-                <div className="col-6">
-                  <h6 className="text-center m-b-10">
-                    <span className="text-muted m-r-5">Target:</span>35,098
-                  </h6>
-                  <div className="progress">
-                    <div
-                      className="progress-bar progress-c-theme"
-                      role="progressbar"
-                      style={{ width: '60%', height: '6px' }}
-                      aria-valuenow="60"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </div>
-                <div className="col-6">
-                  <h6 className="text-center  m-b-10">
-                    <span className="text-muted m-r-5">Duration:</span>350
-                  </h6>
-                  <div className="progress">
-                    <div
-                      className="progress-bar progress-c-theme2"
-                      role="progressbar"
-                      style={{ width: '45%', height: '6px' }}
-                      aria-valuenow="45"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={6} xl={4}>
-          <Card className="card-social">
-            <Card.Body className="border-bottom">
-              <div className="row align-items-center justify-content-center">
-                <div className="col-auto">
-                  <i className="fab fa-twitter text-c-blue f-36" />
-                </div>
-                <div className="col text-end">
-                  <h3>11,200</h3>
-                  <h5 className="text-c-purple mb-0">
-                    +6.2% <span className="text-muted">Total Likes</span>
-                  </h5>
-                </div>
-              </div>
-            </Card.Body>
-            <Card.Body>
-              <div className="row align-items-center justify-content-center card-active">
-                <div className="col-6">
-                  <h6 className="text-center m-b-10">
-                    <span className="text-muted m-r-5">Target:</span>34,185
-                  </h6>
-                  <div className="progress">
-                    <div
-                      className="progress-bar progress-c-green"
-                      role="progressbar"
-                      style={{ width: '40%', height: '6px' }}
-                      aria-valuenow="40"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </div>
-                <div className="col-6">
-                  <h6 className="text-center  m-b-10">
-                    <span className="text-muted m-r-5">Duration:</span>800
-                  </h6>
-                  <div className="progress">
-                    <div
-                      className="progress-bar progress-c-blue"
-                      role="progressbar"
-                      style={{ width: '70%', height: '6px' }}
-                      aria-valuenow="70"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col xl={4}>
-          <Card className="card-social">
-            <Card.Body className="border-bottom">
-              <div className="row align-items-center justify-content-center">
-                <div className="col-auto">
-                  <i className="fab fa-google-plus-g text-c-red f-36" />
-                </div>
-                <div className="col text-end">
-                  <h3>10,500</h3>
-                  <h5 className="text-c-blue mb-0">
-                    +5.9% <span className="text-muted">Total Likes</span>
-                  </h5>
-                </div>
-              </div>
-            </Card.Body>
-            <Card.Body>
-              <div className="row align-items-center justify-content-center card-active">
-                <div className="col-6">
-                  <h6 className="text-center m-b-10">
-                    <span className="text-muted m-r-5">Target:</span>25,998
-                  </h6>
-                  <div className="progress">
-                    <div
-                      className="progress-bar progress-c-theme"
-                      role="progressbar"
-                      style={{ width: '80%', height: '6px' }}
-                      aria-valuenow="80"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </div>
-                <div className="col-6">
-                  <h6 className="text-center  m-b-10">
-                    <span className="text-muted m-r-5">Duration:</span>900
-                  </h6>
-                  <div className="progress">
-                    <div
-                      className="progress-bar progress-c-theme2"
-                      role="progressbar"
-                      style={{ width: '50%', height: '6px' }}
-                      aria-valuenow="50"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={6} xl={4}>
-          <Card>
-            <Card.Header>
-              <Card.Title as="h5">Rating</Card.Title>
-            </Card.Header>
-            <Card.Body>
-              <div className="row align-items-center justify-content-center m-b-20">
-                <div className="col-6">
-                  <h2 className="f-w-300 d-flex align-items-center float-start m-0">
-                    4.7 <i className="fa fa-star f-10 m-l-10 text-c-yellow" />
-                  </h2>
-                </div>
-                <div className="col-6">
-                  <h6 className="d-flex  align-items-center float-end m-0">
-                    0.4 <i className="fa fa-caret-up text-c-green f-22 m-l-10" />
-                  </h6>
-                </div>
-              </div>
-
-              <div className="row">
-                <div className="col-xl-12">
-                  <h6 className="align-items-center float-start">
-                    <i className="fa fa-star f-10 m-r-10 text-c-yellow" />5
-                  </h6>
-                  <h6 className="align-items-center float-end">384</h6>
-                  <div className="progress m-t-30 m-b-20" style={{ height: '6px' }}>
-                    <div
-                      className="progress-bar progress-c-theme"
-                      role="progressbar"
-                      style={{ width: '70%' }}
-                      aria-valuenow="70"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </div>
-
-                <div className="col-xl-12">
-                  <h6 className="align-items-center float-start">
-                    <i className="fa fa-star f-10 m-r-10 text-c-yellow" />4
-                  </h6>
-                  <h6 className="align-items-center float-end">145</h6>
-                  <div className="progress m-t-30  m-b-20" style={{ height: '6px' }}>
-                    <div
-                      className="progress-bar progress-c-theme"
-                      role="progressbar"
-                      style={{ width: '35%' }}
-                      aria-valuenow="35"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </div>
-
-                <div className="col-xl-12">
-                  <h6 className="align-items-center float-start">
-                    <i className="fa fa-star f-10 m-r-10 text-c-yellow" />3
-                  </h6>
-                  <h6 className="align-items-center float-end">24</h6>
-                  <div className="progress m-t-30  m-b-20" style={{ height: '6px' }}>
-                    <div
-                      className="progress-bar progress-c-theme"
-                      role="progressbar"
-                      style={{ width: '25%' }}
-                      aria-valuenow="25"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </div>
-
-                <div className="col-xl-12">
-                  <h6 className="align-items-center float-start">
-                    <i className="fa fa-star f-10 m-r-10 text-c-yellow" />2
-                  </h6>
-                  <h6 className="align-items-center float-end">1</h6>
-                  <div className="progress m-t-30  m-b-20" style={{ height: '6px' }}>
-                    <div
-                      className="progress-bar progress-c-theme"
-                      role="progressbar"
-                      style={{ width: '10%' }}
-                      aria-valuenow="10"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </div>
-                <div className="col-xl-12">
-                  <h6 className="align-items-center float-start">
-                    <i className="fa fa-star f-10 m-r-10 text-c-yellow" />1
-                  </h6>
-                  <h6 className="align-items-center float-end">0</h6>
-                  <div className="progress m-t-30  m-b-5" style={{ height: '6px' }}>
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: '0%' }}
-                      aria-valuenow="0"
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </div>
-              </div>
-            </Card.Body>
-          </Card>
-        </Col>
-        <Col md={6} xl={8}>
+        <Col md={6} xl={6}>
           <Card className="user-list">
             <Card.Header>
-              <Card.Title as="h5">User Project List</Card.Title>
+              <Card.Title as="h5">Investment summary</Card.Title>
             </Card.Header>
             <Card.Body className="p-0">
               <Table responsive hover>
                 <thead>
                   <tr>
-                    <th>User</th>
-                    <th>Project</th>
-                    <th>Completed</th>
-                    <th>Status</th>
-                    <th>Date</th>
+                    <th></th>
+                    <th>Investment</th>
+                    <th>Current Amt</th>
+                    <th>Perf</th>
+                    <th>XIRR</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>
-                      <img className="rounded-circle" style={{ width: '40px' }} src={avatar1} alt="activity-user" />
+                      <i className="fa fa-stop-circle text-success f-36" />
                     </td>
                     <td>
-                      <h6 className="mb-1">Social Media App</h6>
-                      <p className="m-0">
-                        Assigned to<span className="text-c-green"> Tristan Madsen</span>
-                      </p>
+                      <h6 className="mb-1">PPF</h6>
                     </td>
                     <td>
-                      <span className="pie_1">326,134</span>
+                      <span className="pie_1">₹  7,45,432</span>
                     </td>
                     <td>
-                      <h6 className="m-0">68%</h6>
+                      <i className="fa fa-circle text-c-red f-10 m-r-15" />
                     </td>
                     <td>
-                      <h6 className="m-0">October 26, 2017</h6>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <img className="rounded-circle" style={{ width: '40px' }} src={avatar2} alt="activity-user" />
-                    </td>
-                    <td>
-                      <h6 className="mb-1">Newspaper Wordpress Web</h6>
-                      <p className="m-0">
-                        Assigned to<span className="text-c-green"> Marcus Poulsen</span>
-                      </p>
-                    </td>
-                    <td>
-                      <span className="pie_2">110,134</span>
-                    </td>
-                    <td>
-                      <h6 className="m-0">46%</h6>
-                    </td>
-                    <td>
-                      <h6 className="m-0">September 4, 2017</h6>
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td>
-                      <img className="rounded-circle" style={{ width: '40px' }} src={avatar3} alt="activity-user" />
-                    </td>
-                    <td>
-                      <h6 className="mb-1">Dashboard UI Kit Design</h6>
-                      <p className="m-0">
-                        Assigned to<span className="text-c-green"> Felix Johansen</span>
-                      </p>
-                    </td>
-                    <td>
-                      <span className="pie_3">226,134</span>
-                    </td>
-                    <td>
-                      <h6 className="m-0">31%</h6>
-                    </td>
-                    <td>
-                      <h6 className="m-0">November 14, 2017</h6>
+                      <h6 className="m-0">7.35%</h6>
                     </td>
                   </tr>
                   <tr>
                     <td>
-                      <img className="rounded-circle" style={{ width: '40px' }} src={avatar1} alt="activity-user" />
+                      <i className="fa fa-stop-circle text-success f-36" />
                     </td>
                     <td>
-                      <h6 className="mb-1">Social Media App</h6>
-                      <p className="m-0">
-                        Assigned to<span className="text-c-green"> Tristan Madsen</span>
-                      </p>
+                      <h6 className="mb-1">EPF</h6>
                     </td>
                     <td>
-                      <span className="pie_4">500,134</span>
+                      <span className="pie_1">₹  79,45,432</span>
                     </td>
                     <td>
-                      <h6 className="m-0">85%</h6>
+                      <i className="fa fa-circle text-c-red f-10 m-r-15" />
                     </td>
                     <td>
-                      <h6 className="m-0">December 14, 2017</h6>
+                      <h6 className="m-0">7.35%</h6>
                     </td>
                   </tr>
                 </tbody>
