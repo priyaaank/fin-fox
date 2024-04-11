@@ -16,93 +16,107 @@ const DashDefault = () => {
   return (
     <React.Fragment>
       <Row>
-        {dashSalesData.map((data, index) => {
-          return (
-            <Col key={index} xl={6} xxl={4}>
-              <Card>
-                <Card.Body>
-                  <h6 className="mb-4">{data.title}</h6>
-                  <div className="row d-flex align-items-center">
-                    <div className="col-9">
-                      <h3 className="f-w-300 d-flex align-items-center m-b-0">
-                        <i className={`feather ${data.icon} f-30 m-r-5`} /> $249.95
-                      </h3>
-                    </div>
-                    <div className="col-3 text-end">
-                      <p className="m-b-0">{data.value}%</p>
-                    </div>
-                  </div>
-                  <div className="progress m-t-30" style={{ height: '7px' }}>
-                    <div
-                      className={`progress-bar ${data.class}`}
-                      role="progressbar"
-                      style={{ width: `${data.value}%` }}
-                      aria-valuenow={data.value}
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    />
-                  </div>
-                </Card.Body>
-              </Card>
-            </Col>
-          );
-        })}
-        {/* <Col md={6} xl={4}>
-          <Card>
-            <Card.Body>
-              <h6 className="mb-4">Monthly Sales</h6>
-              <div className="row d-flex align-items-center">
-                <div className="col-9">
-                  <h3 className="f-w-300 d-flex align-items-center m-b-0">
-                    <i className="feather icon-arrow-down text-c-red f-30 m-r-5" /> $2.942.32
-                  </h3>
+      <Col md={6} xl={4}>
+          <Card className="card-social">
+            <Card.Body className="border-bottom">
+              <div className="row align-items-center justify-content-center">
+                <div className="col-auto">
+                  <i className="fa fa-money-bill text-primary f-36" />
                 </div>
-
-                <div className="col-3 text-end">
-                  <p className="m-b-0">36%</p>
+                <div className="col text-end">
+                  <h3>₹ 40,30,97,988</h3>
+                  <h5 className="text-c-green mb-0">
+                    <span className="text-muted">Total corpus needed</span>
+                  </h5>
                 </div>
               </div>
-              <div className="progress m-t-30" style={{ height: '7px' }}>
-                <div
-                  className="progress-bar progress-c-theme2"
-                  role="progressbar"
-                  style={{ width: '35%' }}
-                  aria-valuenow="35"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                />
+            </Card.Body>
+            <Card.Body>
+              <div className="row align-items-center justify-content-center card-active">
+                <div className="col-6">
+                  <h6 className="text-center m-b-10">
+                    <span className="text-muted m-r-5">Achieved:</span>
+                    <br/>₹ 16,05,41,956
+                  </h6>
+                </div>
+                <div className="col-6">
+                  <h6 className="text-center  m-b-10">
+                    <span className="text-muted m-r-5">Remaining duration:</span>
+                    <br/>230 mths
+                  </h6>
+                </div>
               </div>
             </Card.Body>
           </Card>
         </Col>
-        <Col xl={4}>
-          <Card>
-            <Card.Body>
-              <h6 className="mb-4">Yearly Sales</h6>
-              <div className="row d-flex align-items-center">
-                <div className="col-9">
-                  <h3 className="f-w-300 d-flex align-items-center m-b-0">
-                    <i className="feather icon-arrow-up text-c-green f-30 m-r-5" /> $8.638.32
-                  </h3>
+        <Col>
+          <Card className="card-social">
+            <Card.Body className="border-bottom">
+              <div className="row align-items-center justify-content-center">
+                <div className="col-auto">
+                  <i className="fa fa-chart-line text-success f-36" />
                 </div>
-
-                <div className="col-3 text-end">
-                  <p className="m-b-0">70%</p>
+                <div className="col text-end">
+                  <h3>₹ 3,53,351</h3>
+                  <h5 className="text-c-green mb-0">
+                    <span className="text-muted">Monthly savings needed</span>
+                  </h5>
                 </div>
               </div>
-              <div className="progress m-t-30" style={{ height: '7px' }}>
-                <div
-                  className="progress-bar progress-c-theme"
-                  role="progressbar"
-                  style={{ width: '70%' }}
-                  aria-valuenow="70"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                />
+            </Card.Body>
+            <Card.Body>
+              <div className="row align-items-center justify-content-center card-active">
+                <div className="col-6">
+                  <h6 className="text-center m-b-10">
+                    <span className="text-muted m-r-5">Overall XIRR:</span>
+                    <br/>9.34%
+                  </h6>
+                </div>
+                <div className="col-6">
+                  <h6 className="text-center  m-b-10">
+                    <span className="text-muted m-r-5">Avg growth (YoY):</span>
+                    <br/>45%
+                  </h6>
+                </div>
               </div>
             </Card.Body>
           </Card>
-        </Col> */}
+        </Col>
+
+        <Col>
+          <Card className="card-social">
+            <Card.Body className="border-bottom">
+              <div className="row align-items-center justify-content-center">
+                <div className="col-auto">
+                  <i className="fa fa-stop-circle text-danger f-36" />
+                </div>
+                <div className="col text-end">
+                  <h3>Savings shortfall</h3>
+                  <h5 className="text-c-green mb-0">
+                    <span className="text-muted">Current projection</span>
+                  </h5>
+                </div>
+              </div>
+            </Card.Body>
+            <Card.Body>
+              <div className="row align-items-center justify-content-center card-active">
+                <div className="col-6">
+                  <h6 className="text-center m-b-10">
+                    <span className="text-muted m-r-5">With contributions:</span>
+                    <br/>₹ 23,05,41,956
+                  </h6>
+                </div>
+                <div className="col-6">
+                  <h6 className="text-center  m-b-10">
+                    <span className="text-muted m-r-5">Without contributions:</span>
+                    <br/>₹ 18,05,41,956
+                  </h6>
+                </div>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+
         <Col md={6} xl={8}>
           <Card className="Recent-Users">
             <Card.Header>
