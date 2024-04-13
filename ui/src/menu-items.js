@@ -72,7 +72,7 @@ const menuItems = {
           title: 'Settings',
           type: 'item',
           icon: 'feather icon-settings',
-          url: '/basic/breadcrumb'
+          url: '/settings/main'
         },
         {
           id: 'logout',
