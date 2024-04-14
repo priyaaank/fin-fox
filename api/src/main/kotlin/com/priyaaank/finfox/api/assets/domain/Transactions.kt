@@ -1,4 +1,8 @@
 package com.priyaaank.finfox.api.assets.domain
 
-class Transactions {
+class Transactions(
+    asset: Asset,
+    transactionList: List<Transaction>,
+) {
+
 }
