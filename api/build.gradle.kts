@@ -16,6 +16,7 @@ repositories {
 }
 
 dependencies {
+    annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
     ksp("io.micronaut:micronaut-http-validation")
     ksp("io.micronaut.serde:micronaut-serde-processor")
     implementation("io.micronaut.kotlin:micronaut-kotlin-runtime")
@@ -24,6 +25,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${kotlinVersion}")
     implementation("javax.inject:javax.inject:1")
     implementation("io.micronaut:micronaut-http-client")
+    implementation("io.micronaut.serde:micronaut-serde-jackson")
+    testImplementation("com.jayway.jsonpath:json-path:2.6.0")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.8.2")
     testImplementation("io.micronaut.test:micronaut-test-junit5")

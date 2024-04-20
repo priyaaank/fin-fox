@@ -1,14 +1,34 @@
 package com.priyaaank.finfox.api.goals.controller
 
+import com.priyaaank.finfox.api.goals.presenter.AmountPresenter
+import com.priyaaank.finfox.api.goals.presenter.GoalsPresenter
+import com.priyaaank.finfox.api.goals.presenter.TargetPeriodPresenter
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
+import java.time.LocalDate
 
 @Controller("/goals")
 class GoalsController {
 
     @Get("/all")
-    fun index(): String {
-        return "Welcome to Goals Controller"
+    fun index(): GoalsPresenter {
+        return GoalsPresenter(
+            id = 1,
+            name = "My Goal",
+            targetAmount = AmountPresenter(amount = 12342.23, currency = "INR"),
+            status = "ACTIVE",
+            targetPeriod = TargetPeriodPresenter(periodType = "YEARS", periodValue = 10),
+            plannedAmount = AmountPresenter(amount = 12342.23, currency = "INR"),
+            plannedDate = LocalDate.of(2020, 12, 12),
+            createdDate = LocalDate.of(2020, 12, 12),
+            lastModifiedDate = LocalDate.of(2020, 12, 12),
+            createdBy = "Priyank",
+            lastModifiedBy = "Priyank",
+            version = 1,
+            description = "some desc",
+            assumedInflationPercent = 2.34,
+            currentAmount = AmountPresenter(amount = 1242.23, currency = "INR")
+        )
     }
 
 }
