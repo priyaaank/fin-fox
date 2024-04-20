@@ -1,8 +1,6 @@
 package com.priyaaank.finfox.api.goals.controller
 
-import com.priyaaank.finfox.api.goals.presenter.AmountPresenter
-import com.priyaaank.finfox.api.goals.presenter.GoalsPresenter
-import com.priyaaank.finfox.api.goals.presenter.TargetPeriodPresenter
+import com.priyaaank.finfox.api.goals.presenter.*
 import io.micronaut.http.annotation.Controller
 import io.micronaut.http.annotation.Get
 import java.time.LocalDate
@@ -11,8 +9,8 @@ import java.time.LocalDate
 class GoalsController {
 
     @Get("/all")
-    fun index(): GoalsPresenter {
-        return GoalsPresenter(
+    fun index(): APIResponse<List<GoalsPresenter>> {
+        val goal = GoalsPresenter(
             id = 1,
             name = "My Goal",
             targetAmount = AmountPresenter(amount = 12342.23, currency = "INR"),
@@ -28,6 +26,12 @@ class GoalsController {
             description = "some desc",
             assumedInflationPercent = 2.34,
             currentAmount = AmountPresenter(amount = 1242.23, currency = "INR")
+        )
+
+        return APIResponse(
+            listOf(goal),
+            StatusPresenter(code = "200", message = "SUCCESS", 1, 1, 1, 1),
+            emptyList()
         )
     }
 

@@ -25,10 +25,10 @@ class GoalsControllerTest {
         val ctx: ReadContext = JsonPath.parse(response)
 
         // Extract values from the JSON document using JSONPath expressions
-        val id: Int = ctx.read("$.id")
-        val name: String = ctx.read("$.name")
-        val status: String = ctx.read("$.status")
-        val targetAmount: Double = ctx.read("$.targetAmount.amount")
+        val id: Int = ctx.read("$.body[0].id")
+        val name: String = ctx.read("$.body[0].name")
+        val status: String = ctx.read("$.body[0].status")
+        val targetAmount: Double = ctx.read("$.body[0].targetAmount.amount")
 
         // Assert that the extracted values are as expected
         assertEquals(1, id)
