@@ -6,8 +6,9 @@ import io.micronaut.http.annotation.Get
 @Controller("/goals")
 class GoalsController {
 
-    @Get("/")
+    @Get("/all")
     fun index(): String {
         return "Welcome to Goals Controller"
     }
+
 }

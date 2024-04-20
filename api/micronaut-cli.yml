@@ -1,6 +1,6 @@
 applicationType: default
-defaultPackage: com.example
-testFramework: junit
+defaultPackage: com.priyaaank.finfox.api
+testFramework: spock
 sourceLanguage: kotlin
-buildTool: maven
-features: [app-name, github-workflow-ci, http-client-test, junit, kapt, kotlin, kotlin-application, logback, maven, maven-enforcer-plugin, micronaut-aot, micronaut-http-validation, netty-server, properties, readme, serialization-jackson, shade, static-resources]
+buildTool: gradle_kotlin
+features: [app-name, gradle, http-client-test, kotlin, kotlin-application, ksp, logback, micronaut-aot, micronaut-build, micronaut-http-validation, netty-server, properties, readme, serialization-jackson, shade, spock, static-resources]
