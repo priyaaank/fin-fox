@@ -1,0 +1,25 @@
+micronaut:
+  application:
+    name: finfox
+datasources:
+  default:
+    driver-class-name: org.postgresql.Driver
+    db-type: postgres
+    dialect: POSTGRES
+    url: 'jdbc:postgresql://${JDBC_HOST:`localhost`}:${JDBC_PORT:`5432`}/${DB_NAME:`finfoxdb`}'
+    username: ${JDBC_USER:`finfoxdev`}
+    password: ${JDBC_PASSWORD:`finfoxdev`}
+jpa:
+  properties:
+    hibernate:
+      hbm2ddl:
+        auto: validate
+      show_sql: true
+jackson:
+  serialization:
+    write-dates-as-timestamps: false
+
+flyway:
+  datasources:
+    default:
+      enabled: true
